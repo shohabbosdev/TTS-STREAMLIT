@@ -13,7 +13,7 @@ def text_to_speech(text, language="uz"):
     try:
         # Preprocess the text
         text = text.replace('\n', ' ')
-        text = to_cyrillic(text)
+        text = text if any('\u0400' <= char <= '\u04FF' for char in text) else to_cyrillic(text)
         
         # Send the API request
         payload = {"inputs": text}
