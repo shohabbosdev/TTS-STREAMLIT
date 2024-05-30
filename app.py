@@ -3,6 +3,7 @@ import requests
 from latin_cyrillic_symbols import to_cyrillic
 from tqdm import tqdm
 
+api_key = st.secret["API_TOKEN"]
 # API URL and headers
 API_URL = "https://api-inference.huggingface.co/models/shohabbosdev/text-to-audio"
 headers = {"Authorization": f"Bearer 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"}
