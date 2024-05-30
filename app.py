@@ -6,7 +6,7 @@ from tqdm import tqdm
 api_key = st.secret["API_TOKEN"]
 # API URL and headers
 API_URL = "https://api-inference.huggingface.co/models/shohabbosdev/text-to-audio"
-headers = {"Authorization": f"Bearer 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"}
+headers = {"Authorization": f"Bearer {api_key}"}
 
 # Function to handle text-to-speech conversion
 def text_to_speech(text, language="uz"):
