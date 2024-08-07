@@ -62,7 +62,7 @@ if select_menu == menu[0]:  # Home
             st.success("✅ Text converted to speech successfully!")
             with st.expander("🔻 Processed Text 🔻"):
                 st.write(processed_text)
-            st.audio(audio_content, format='audio/wav', autoplay=True)
+            st.audio(audio_content, format='audio/ogg', autoplay=True)
         else:
             st.error(f"❌ Error occurred with status code: {status_code}")
 
